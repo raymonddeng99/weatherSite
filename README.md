@@ -4,7 +4,7 @@ An app to check the weather (forecast, weather description, temperature) given a
 
 ## Preview
 
-(/css/la.jpg)]
+[(/css/la.jpg)]
 
 ## API Used
 
