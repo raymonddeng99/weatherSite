@@ -5,6 +5,7 @@ var open = require('open');
 const fetch = require("node-fetch");
 
 const port = 8000;
+const openWeatherID = '1d31ad7445684e2a19e03b3f44fa6618';
 
 // __dirname will use the current path from where you run this file 
 function allowCrossDomain (req, res, next) {
@@ -15,11 +16,19 @@ function allowCrossDomain (req, res, next) {
 }
 
 async function grabWeather(ZIPCode, countryCode){
-	const url = 'http://api.openweathermap.org/data/2.5/weather?zip='+ZIPCode+','+ countryCode + '&APPID=' + '1d31ad7445684e2a19e03b3f44fa6618';
+
+	const url = 'http://api.openweathermap.org/data/2.5/weather?zip='+ZIPCode+','+ countryCode + '&APPID=' + openWeatherID;
 	try {
 		const response = await fetch(url);
-		const json = await response.json();
-		return json;
+
+		if (response.status != 200){
+			return 'Error in sending API request.\n\nError message: ' + response.statusText + ', HTTP status: ' + response.status;
+		}
+
+		else{
+			const json = await response.json();
+			return json;
+		}
   	} catch (error) {
     	console.log(error);
   	}
@@ -43,8 +52,13 @@ app.post('/weather', async (req, res) => {
 	var ZIPCode = await body.ZIPCode;
 	var countryCode = await body.countryCode;
 
-	var weatherData = await grabWeather(ZIPCode, countryCode);
-	res.send(weatherData);
+	try{
+		var weatherData = await grabWeather(ZIPCode, countryCode);
+		res.send(weatherData);
+	} catch (error){
+		console.log(error);
+		res.send(error);
+	}
 })
 
 app.listen(port, async (err) => {

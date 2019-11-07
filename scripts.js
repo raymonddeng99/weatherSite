@@ -29,9 +29,19 @@
               request.open('POST', '/weather', false);
               request.setRequestHeader("Content-Type", "application/json");
               request.onload = async res => {
-                  var weatherInfo = JSON.parse(res.target.response);
-                  var formattedResponse = formatResponse(weatherInfo);
-                  alert(formattedResponse);
+
+                    var response = res.target.response;
+
+                    if (response.search("Error") == -1){
+                      var weatherInfo = JSON.parse(response);
+                      var formattedResponse = formatResponse(weatherInfo);
+                      alert(formattedResponse);
+                    }
+
+                    else{
+                      alert(response);
+                    }
+                    
                 }
 
               const params = {'ZIPCode':ZIPCode,'countryCode':countryCode};

@@ -3,8 +3,11 @@
     "name": "startbootstrap-the-big-picture",
     "version": "4.2.1",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "start": "node_modules/.bin/gulp watch",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build"
     },
+    "homepage": "https://raymonddeng99.github.io/weatherSite/index.html",
     "description": "A full page image background with fixed bottom navigation HTML template built with Bootstrap",
     "keywords": [
         "css",
@@ -31,6 +34,7 @@
     "dependencies": {
         "bootstrap": "4.3.1",
         "express": "^4.17.1",
+        "gh-pages": "^2.1.1",
         "jquery": "3.4.1"
     },
     "devDependencies": {

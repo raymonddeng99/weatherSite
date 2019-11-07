@@ -38,7 +38,7 @@
           <h1 class="mt-5">Weather App</h1>
           <p>Courtesy of OpenWeather.</p>
 
-          <form onsubmit="getWeatherAPIData(ZIPCode.value,countryCode.value)" id="weatherForm">
+          <form onsubmit="getWeatherAPIData(ZIPCode.value,countryCode.value); return false;" id="weatherForm">
           	Zip Code:<br>
   			   <input type="text" name="ZIPCode" value="91755"><br>
   			   Country Code:<br>
