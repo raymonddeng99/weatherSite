@@ -5,6 +5,7 @@
  */
 body {
   background: url('la.jpg') no-repeat center center fixed;
+  background: filter: brightness(50%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

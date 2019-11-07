@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Weather App">
+  <meta name="author" content="Raymond Deng">
 
   <title>Weather App</title>
 
@@ -34,17 +34,27 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="color:black">
           <h1 class="mt-5">Weather App</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates rerum eveniet sapiente repellat esse, doloremque quod recusandae deleniti nostrum assumenda vel beatae sed aut modi nesciunt porro quisquam voluptatem.</p>
+          <p>Courtesy of OpenWeather.</p>
+
+          <form onsubmit="getWeatherAPIData(ZIPCode.value,countryCode.value)" id="weatherForm">
+          	Zip Code:<br>
+  			   <input type="text" name="ZIPCode" value="91755"><br>
+  			   Country Code:<br>
+  			   <input type="text" name="countryCode" value="us"><br><br>
+  			   <input type="submit" value="Submit">
+         </form>
+
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="scripts.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="css/the-big-picture.css"></script>
 
 </body>
 
