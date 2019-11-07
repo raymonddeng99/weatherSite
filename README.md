@@ -4,7 +4,7 @@ An app to check the weather (forecast, weather description, temperature) given a
 
 ## Preview
 
-[![website preview](https://github.com/raymonddeng99/weatherSite/tree/master/css/la.jpg)]
+![website preview](https://github.com/raymonddeng99/weatherSite/tree/master/css/la.jpg)
 
 ## Resources Used
 
