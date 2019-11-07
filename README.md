@@ -1,10 +1,8 @@
-# [weatherSite]()
-
-An app to check the weather (forecast, weather description, temperature) given a ZIP Code and country code. Made for the LA.Fellows application. Thanks for this interesting add to the application, it was a lot of fun!
-
-## Preview
+## weatherSite
 
 ![website preview](https://github.com/raymonddeng99/weatherSite/tree/master/css/la.jpg)
+
+App that provides weather prediction (forecast, weather description, temperature) given a ZIP Code and country code. Made for the LA.Fellows application. Thanks for this interesting add to the application, it was a lot of fun!
 
 ## Resources Used
 
