@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot.png)
 
-App for Tech.LA Fellows that provides weather prediction (forecast, weather description, temperature) given a ZIP Code and country code. 
+App that provides weather prediction (forecast, weather description, temperature) given a ZIP Code and country code. 
 
 ## Resources Used
 
